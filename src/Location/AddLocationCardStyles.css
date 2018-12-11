@@ -1,3 +1,13 @@
+.input-group {
+  padding: 24px;
+}
+
+.addLocationCard {
+  margin: 36px auto;
+  margin-bottom: 24px;
+  width: 90%;
+  padding: 14px;
+}
 Button.addLocationButton {
   flex-wrap: wrap; 
   margin: auto;
@@ -5,15 +15,11 @@ Button.addLocationButton {
   margin: 24px;
 }
 
-
-
-.input-group {
-  padding: 24px;
+#fab {
+  height: 18px;
 }
 
-.addLocationCard {
-  margin: auto;
-  margin-bottom: 24px;
-  width: 90%;
-  padding: 14px;
+#extended-icon {
+  margin-right: 24px;
+  height: 20px;
 }

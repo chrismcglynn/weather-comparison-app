@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Locations from "./Location/Locations";
 import AddLocation from "./Location/AddLocation";
 import Navbar from "./Header/Navbar";
 import LocationCard from "./Location/LocationCard";
@@ -39,13 +38,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <h2>Please Enter your City and State:</h2>
         <AddLocation addLocation={this.addLocation} />
         <LocationCard />
-        <Locations
-          deleteLocation={this.deleteLocation}
-          locations={this.state.locations}
-        />
       </div>
     );
   }

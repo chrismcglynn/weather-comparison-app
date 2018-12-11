@@ -1,24 +1,14 @@
 import React from "react";
 import { Card, Input, Fab } from "@material-ui/core";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import AddIcon from "@material-ui/icons/Add";
 import "./AddLocationCardStyles.css";
 
-const styles = theme => ({
-  fab: {
-    margin: theme.spacing.unit
-  },
-  extendedIcon: {
-    marginRight: theme.spacing.unit
-  }
-});
-
-const AddLocationCard = ({ handleChange, handleSubmit, handleMouseEnter, handleMouseLeave, classes }) => {
+const AddLocationCard = ({ handleChange, handleSubmit }) => {
  
   return (
     <div>
-      <Card className="addLocationCard">
+      <Card className="addLocationCard" elevation={24}>
+        <h2>Please Enter your City and State:</h2>
         <form
           id="location-form"
           onSubmit={handleSubmit}>
@@ -43,9 +33,9 @@ const AddLocationCard = ({ handleChange, handleSubmit, handleMouseEnter, handleM
             variant="extended"
             color="primary"
             aria-label="Add"
-            className={classes.fab}
+            id="fab"
           >
-            <AddIcon className={classes.extendedIcon} />
+            <AddIcon id="extended-icon" />
             Add Location
           </Fab>
         </form>
@@ -54,9 +44,4 @@ const AddLocationCard = ({ handleChange, handleSubmit, handleMouseEnter, handleM
   );
 };
 
-AddLocationCard.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-
-export default withStyles(styles)(AddLocationCard);
+export default AddLocationCard

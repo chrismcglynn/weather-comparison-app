@@ -1,0 +1,48 @@
+.location-card {
+  margin: 36px auto;
+  margin-bottom: 24px;
+  width: 90%;
+  padding: 14px;
+}
+
+.location-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.location-info {
+  flex-wrap: wrap;
+}
+
+.city-header {
+  font-size: 32px;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.state-header {
+  font-size: 14px;
+  justify-content: flex-start;
+  margin: 0;
+  margin-left: -24px;
+}
+
+.wi-day-lightning{
+  font-size: 60px;
+  color: lightblue;
+}
+
+.card-content {
+  height: 50px;
+}
+
+#fab {
+  height: 18px;
+}
+
+#extended-icon {
+  margin-right: 4px;
+  height: 20px;
+}

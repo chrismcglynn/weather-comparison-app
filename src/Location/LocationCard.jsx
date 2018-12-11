@@ -1,62 +1,41 @@
 import React from "react";
-import { Card, Input, Fab } from "@material-ui/core";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import { Card, Fab } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
-import "./AddLocationCardStyles.css";
+import "weather-icons/css/weather-icons.css";
+import "./LocationCardStyles.css";
 
-const styles = theme => ({
-  fab: {
-    margin: theme.spacing.unit
-  },
-  extendedIcon: {
-    marginRight: theme.spacing.unit
-  }
-});
-
-const AddLocationCard = ({ handleChange, handleSubmit, handleMouseEnter, handleMouseLeave, classes }) => {
-
+const AddLocationCard = () => {
   return (
     <div>
-      <Card className="addLocationCard">
-        <form
-          id="location-form"
-          onSubmit={handleSubmit}>
-          <div className="input-group">
-            <Input
-              required
-              fullWidth
-              id="city"
-              placeholder="City"
-              onChange={handleChange} />
+      <Card className="location-card" elevation={24}>
+        <div className="location-header-wrapper">
+          <div className="location-info">
+            <span>
+              <p className="city-header">Charlotte</p>
+            </span>
+            <span>
+              <p className="state-header">North Carolina</p>
+            </span>
           </div>
-          <div className="input-group">
-            <Input
-              required
-              fullWidth
-              id="state"
-              placeholder="State"
-              onChange={handleChange} />
+          <div className="weather-icon-wrapper">
+            <i className="wi wi-day-lightning" />
           </div>
-          <Fab
-            type="submit"
-            variant="extended"
-            color="secondary"
-            aria-label="Add"
-            className={classes.fab}
-          >
-            <DeleteIcon className={classes.extendedIcon} />
-            Remove Location
-          </Fab>
-        </form>
+        </div>
+        <div className="card-content">
+        </div>
+        <Fab
+          type="submit"
+          variant="extended"
+          color="secondary"
+          aria-label="Add"
+          id="fab"
+        >
+          <DeleteIcon id="extended-icon" />
+          Remove Location
+        </Fab>
       </Card>
     </div>
   );
 };
 
-AddLocationCard.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-
-export default withStyles(styles)(AddLocationCard);
+export default AddLocationCard
