@@ -1,8 +1,10 @@
+This is a simple React application that is meant to help people who are wanting to easily compare their weather to other cities that they are curious about in a simple and easy to use app.
+
+## Available Scripts
+
 Clone repository and install dependencies:
 
 ### `npm install` 
-
-## Available Scripts
 
 In the project directory, you can run:
 
