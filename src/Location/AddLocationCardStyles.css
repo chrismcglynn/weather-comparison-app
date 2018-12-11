@@ -1,0 +1,19 @@
+Button.addLocationButton {
+  flex-wrap: wrap; 
+  margin: auto;
+  width: 50%;
+  margin: 24px;
+}
+
+
+
+.input-group {
+  padding: 24px;
+}
+
+.addLocationCard {
+  margin: auto;
+  margin-bottom: 24px;
+  width: 90%;
+  padding: 14px;
+}
