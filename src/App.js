@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Locations from "./Location/Locations";
 import AddLocation from "./Location/AddLocation";
 import Navbar from "./Header/Navbar";
-import WeatherTable from "./Table/WeatherTable";
+import LocationCard from "./Location/LocationCard";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
@@ -41,7 +41,7 @@ class App extends Component {
         <Navbar />
         <h2>Please Enter your City and State:</h2>
         <AddLocation addLocation={this.addLocation} />
-        <WeatherTable />
+        <LocationCard />
         <Locations
           deleteLocation={this.deleteLocation}
           locations={this.state.locations}
