@@ -7,8 +7,9 @@ const AddLocationCard = ({ handleChange, handleSubmit }) => {
  
   return (
     <div>
-      <Card className="addLocationCard" elevation={24}>
-        <h2>Please Enter your City and State:</h2>
+      <Card
+        className="add-location-card"
+        elevation={18}>
         <form
           id="location-form"
           onSubmit={handleSubmit}>
@@ -35,7 +36,7 @@ const AddLocationCard = ({ handleChange, handleSubmit }) => {
             aria-label="Add"
             id="fab"
           >
-            <AddIcon id="extended-icon" />
+            <AddIcon id="extendedIcon" />
             Add Location
           </Fab>
         </form>

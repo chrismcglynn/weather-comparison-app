@@ -2,20 +2,14 @@ import React, { Component } from "react";
 import AddLocation from "./Location/AddLocation";
 import Navbar from "./Header/Navbar";
 import LocationCard from "./Location/LocationCard";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons";
-
 import "./App.css";
-
-library.add(fab, faCheckSquare, faCoffee);
 
 class App extends Component {
   state = {
     locations: [
       { city: "Charlotte", state: "North Carolina", id: 1 },
       { city: "Loveland", state: "Colorado", id: 2 },
-      { city: "San Fransisco", state: "California", id: 3 }
+      { city: "San Francisco", state: "California", id: 3 }
     ]
   };
 
@@ -39,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <AddLocation addLocation={this.addLocation} />
-        <LocationCard />
+        <LocationCard deleteLocation={this.deleteLocation} locations={this.state.locations} />
       </div>
     );
   }
