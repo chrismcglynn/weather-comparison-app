@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AddLocation from "./Location/AddLocation";
 import Navbar from "./Header/Navbar";
 import LocationCard from "./Location/LocationCard";
+import axios from 'axios';
 import "./App.css";
 
 class App extends Component {
@@ -12,6 +13,18 @@ class App extends Component {
       { city: "San Francisco", state: "California", id: 3 }
     ]
   };
+
+  componentDidMount() {
+    const api_url = process.env.REACT_APP_DEV_API_URL;
+    const api_key = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
+    axios
+      .get(
+        api_url + `${this.state.locations[0].city}` + api_key
+      )
+      .then(res => {
+        console.log(res.data);
+      });
+  }
 
   addLocation = location => {
     location.id = Math.floor(Math.random() * 1000 + 1);
