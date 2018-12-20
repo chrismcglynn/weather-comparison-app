@@ -9,7 +9,7 @@ const AddLocationCard = ({ handleChange, handleSubmit }) => {
     <div>
       <Card
         className="add-location-card"
-        elevation={18}>
+        elevation={4}>
         <form
           id="location-form"
           onSubmit={handleSubmit}>

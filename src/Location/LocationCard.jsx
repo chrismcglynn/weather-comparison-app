@@ -8,7 +8,7 @@ const AddLocationCard = ({ deleteLocation, locations }) => {
   const locationList = locations.map(location => {
     return (
       <div className="location-list" key={location.id}>
-        < Card className="location-card" elevation={24}>
+        < Card className="location-card" elevation={4}>
           <div className="location-header-wrapper">
             <div className="location-info">
               <span>

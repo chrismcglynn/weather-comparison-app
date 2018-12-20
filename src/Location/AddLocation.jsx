@@ -9,19 +9,7 @@ class AddLocation extends Component {
     city: null,
     state: null,
   }
-
-  // componentDidMount() {
-  //   const api_url = process.env.REACT_APP_DEV_API_URL;
-  //   const api_key = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
-  //   axios
-  //     .get(
-  //       api_url +  + api_key
-  //     )
-  //     .then(res => {
-  //       console.log(res.data);
-  //     });
-  // }
-
+  
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value

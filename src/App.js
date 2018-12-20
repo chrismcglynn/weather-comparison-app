@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import AddLocation from "./Location/AddLocation";
 import Navbar from "./Header/Navbar";
 import LocationCard from "./Location/LocationCard";
-
 import "./App.css";
 
 class App extends Component {
@@ -13,8 +12,6 @@ class App extends Component {
       { city: "San Francisco", state: "California", id: 3 }
     ]
   };
-
-
 
   addLocation = location => {
     location.id = Math.floor(Math.random() * 1000 + 1);
