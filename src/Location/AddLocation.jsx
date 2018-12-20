@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddLocationCard from './AddLocationCard';
+import axios from 'axios';
 
 
 class AddLocation extends Component {
@@ -9,6 +10,18 @@ class AddLocation extends Component {
     state: null,
   }
 
+  // componentDidMount() {
+  //   const api_url = process.env.REACT_APP_DEV_API_URL;
+  //   const api_key = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
+  //   axios
+  //     .get(
+  //       api_url +  + api_key
+  //     )
+  //     .then(res => {
+  //       console.log(res.data);
+  //     });
+  // }
+
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -17,6 +30,17 @@ class AddLocation extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    const api_url = process.env.REACT_APP_DEV_API_URL;
+    const api_key = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
+    const cityInput = document.getElementById('city').value;
+    console.log(cityInput);
+    axios
+      .get(
+        api_url + `${cityInput}` + api_key
+      )
+      .then(res => {
+        console.log(res.data);
+      });
     this.props.addLocation(this.state);
     document.getElementById('location-form').reset();
   }
