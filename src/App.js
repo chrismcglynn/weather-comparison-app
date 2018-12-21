@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AddLocation from "./Location/AddLocation";
 import Navbar from "./Header/Navbar";
-import LocationCard from "./Location/LocationCard";
+import Locations from './Location/Locations';
 import "./App.css";
 
 class App extends Component {
@@ -33,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <AddLocation addLocation={this.addLocation} />
-        <LocationCard deleteLocation={this.deleteLocation} locations={this.state.locations} />
+        <Locations locations={this.state.locations} />
       </div>
     );
   }
