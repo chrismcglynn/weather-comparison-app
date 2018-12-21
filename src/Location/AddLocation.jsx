@@ -9,15 +9,8 @@ class AddLocation extends Component {
     city: null,
     state: null,
   }
-  
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value
-    });
-  }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
+  getLocation = () => {
     const api_url = process.env.REACT_APP_DEV_API_URL;
     const api_key = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
     const cityInput = document.getElementById('city').value;
@@ -30,6 +23,17 @@ class AddLocation extends Component {
         console.log(res.data);
       });
     this.props.addLocation(this.state);
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    });
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.getLocation();
     document.getElementById('location-form').reset();
   }
 
