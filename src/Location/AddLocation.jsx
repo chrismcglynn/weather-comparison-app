@@ -17,7 +17,7 @@ class AddLocation extends Component {
     console.log(cityInput);
     axios
       .get(
-        api_url + `${cityInput}` + api_key
+        api_url + `${cityInput}&units=imperial` + api_key
       )
       .then(res => {
         console.log(res.data);
