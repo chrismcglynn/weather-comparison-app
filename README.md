@@ -2,7 +2,7 @@ This is a simple React application that is meant to help people who are wanting 
 
 **AS OF NOW, EVERYTHING ON THE FRONT END IS HARDCODED... USE CONSOLE TO SEE WEATHER DATA**
 
-## To Run App
+## To Setup App
 
 Clone repository and install dependencies:
 
@@ -11,14 +11,16 @@ Clone repository and install dependencies:
 This app uses OpenWeatherMap API keys.
 Sign up to receive your own keys or access the docs [here](https://openweathermap.org/api)
 
-Once keys are obtained, create a ```.env``` file for your app in the root of the app.
-add these two variables:
-```REACT_APP_OPEN_WEATHER_API_KEY='&appid=yourapikey'```
+Once keys are obtained, create a ```.env``` in the root of the app.
+Add these two variables:
 ```REACT_APP_DEV_API_URL='http://api.openweathermap.org/data/2.5/weather?q='```
+```REACT_APP_OPEN_WEATHER_API_KEY='&appid=yourapikey'```
 
 You can find the call in `AddLocations.jsx` for now!
 
 **REMEMBER TO ADD YOUR `.env` FILE TO YOUR `.gitignore` BEFORE COMMITTING CODE!**
+
+##Scripts
 
 ### `npm install` 
 
