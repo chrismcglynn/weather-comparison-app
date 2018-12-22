@@ -1,5 +1,7 @@
 This is a simple React application that is meant to help people who are wanting to easily compare their weather to other cities that they are curious about in a simple and easy to use app.
 
+**AS OF NOW, EVERYTHING ON THE FRONT END IS HARDCODED... USE CONSOLE TO SEE WEATHER DATA**
+
 ## To Run App
 
 Clone repository and install dependencies:
