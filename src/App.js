@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import AddLocation from "./Location/AddLocation";
-import Navbar from "./Header/Navbar";
-import Locations from './Location/Locations';
+import AddLocation from "./Components/AddLocation/AddLocation";
+import Navbar from "./Components/Header/Navbar";
+import Locations from './Components/Location/Locations';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import "./App.css";

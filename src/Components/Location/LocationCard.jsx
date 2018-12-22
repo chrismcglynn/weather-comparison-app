@@ -2,9 +2,9 @@ import React from "react";
 import { Card, Fab, Grid } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import "weather-icons/css/weather-icons.css";
-import "./LocationCardStyles.css";
+//import "./LocationCardStyles.css";
 
-const AddLocationCard = ({ deleteLocation, locations }) => {
+const LocationCard = ({ deleteLocation, locations }) => {
   const locationList = locations.map(location => {
     return (
     <Grid item xs={12} sm={6} key={location.id}>
@@ -48,4 +48,4 @@ const AddLocationCard = ({ deleteLocation, locations }) => {
   )
 };
 
-export default AddLocationCard;
+export default LocationCard;
