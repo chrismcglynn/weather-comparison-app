@@ -39,12 +39,10 @@ class AddLocation extends Component {
 
   render() {
     return (
-      <div>
-        <AddLocationCard
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSubmit}
-        />
-      </div>
+      <AddLocationCard
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
+      />
     )
   }
 }

@@ -5,3 +5,10 @@
 .header-main {
   margin-bottom: 24px;
 }
+
+.test {
+  padding: 14px;
+  background-color: red;
+  width: 90%;
+  margin: 36px auto;
+}

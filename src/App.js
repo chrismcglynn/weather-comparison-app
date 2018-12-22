@@ -2,7 +2,15 @@ import React, { Component } from "react";
 import AddLocation from "./Location/AddLocation";
 import Navbar from "./Header/Navbar";
 import Locations from './Location/Locations';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import "./App.css";
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+});
 
 class App extends Component {
   state = {
@@ -32,11 +40,19 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <AddLocation addLocation={this.addLocation} />
-        <Locations locations={this.state.locations} deleteLocation={this.deleteLocation} />
-      </div>
+        <div className='classes.root'>
+          <Grid container>
+            <Grid item xs={12}>
+              <AddLocation addLocation={this.addLocation} />
+            </Grid>
+            <Grid container>
+              <Locations locations={this.state.locations} deleteLocation={this.deleteLocation} />
+            </Grid>
+          </Grid>
+        </div>
+    </div>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App)
