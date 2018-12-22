@@ -33,7 +33,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <AddLocation addLocation={this.addLocation} />
-        <Locations locations={this.state.locations} />
+        <Locations locations={this.state.locations} deleteLocation={this.deleteLocation} />
       </div>
     );
   }
