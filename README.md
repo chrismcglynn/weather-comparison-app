@@ -20,7 +20,7 @@ You can find the call in `AddLocations.jsx` for now!
 
 **REMEMBER TO ADD YOUR `.env` FILE TO YOUR `.gitignore` BEFORE COMMITTING CODE!**
 
-##Scripts
+## Scripts
 
 ### `npm install` 
 
