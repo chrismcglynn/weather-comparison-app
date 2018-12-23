@@ -41,6 +41,8 @@ class App extends Component {
 
   addLocation = location => {
     location.id = Math.floor(Math.random() * 1000 + 1);
+    location.city = location.city.charAt(0).toUpperCase() + location.city.slice(1);
+    location.state = location.city.charAt(0).toUpperCase() + location.state.slice(1);
     let locations = [...this.state.locations, location];
     this.setState({
       locations
