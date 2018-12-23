@@ -36,7 +36,7 @@ const LocationCard = ({ deleteLocation, locations, classes }) => {
               {location.temperature + String.fromCharCode(176)}
             </Typography>
             <Typography gutterBottom variant="h5" component="h2">
-              {location.condition.charAt(0).toUpperCase() + location.condition.slice(1)}
+              {location.condition}
             </Typography>
             <Button
               className={classes.deleteButton}

@@ -20,21 +20,21 @@ class App extends Component {
         city: "Charlotte",
         state: "North Carolina",
         temperature: 50,
-        condition: 'clear sky'
+        condition: 'Partly Cloudy'
       },
       {
         id: 2,
         city: "Loveland",
         state: "Colorado",
         temperature: 60,
-        condition: 'clear sky'
+        condition: 'Clear Sky'
       },
       { 
         id: 3, 
         city: "San Francisco", 
         state: "California",
         temperature: 75,
-        condition: 'clear sky'
+        condition: 'Rainy'
       }
     ]
   };
