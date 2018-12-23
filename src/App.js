@@ -15,9 +15,27 @@ const styles = theme => ({
 class App extends Component {
   state = {
     locations: [
-      { city: "Charlotte", state: "North Carolina", id: 1 },
-      { city: "Loveland", state: "Colorado", id: 2 },
-      { city: "San Francisco", state: "California", id: 3 }
+      {
+        id: 1,
+        city: "Charlotte",
+        state: "North Carolina",
+        temperature: 50,
+        condition: 'clear sky'
+      },
+      {
+        id: 2,
+        city: "Loveland",
+        state: "Colorado",
+        temperature: 60,
+        condition: 'clear sky'
+      },
+      { 
+        id: 3, 
+        city: "San Francisco", 
+        state: "California",
+        temperature: 75,
+        condition: 'clear sky'
+      }
     ]
   };
 

@@ -1,35 +1,38 @@
 import React from "react";
-import { Card, Input, Fab } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
-import "./AddLocationCardStyles.css";
-import { withStyles } from '@material-ui/core/styles';
+import { Button, Card, Input, withStyles } from "@material-ui/core";
 
 const styles = theme => ({
   card: {
     padding: theme.spacing.unit * 2,
     color: theme.palette.text.secondary,
-    textAlign: 'center',
-    margin: '36px auto',
-    marginBottom: '24px',
-    width: '90%',
+    textAlign: "center",
+    margin: "36px auto",
+    marginBottom: "24px",
   },
+  container: {
+    display: "flex",
+    flexWrap: "wrap"
+  },
+  input: {
+    margin: theme.spacing.unit
+  }
 });
 
 const AddLocationCard = ({ handleChange, handleSubmit, classes }) => {
   return (
     <Card className={classes.card} elevation={4}>
       <form id="location-form" onSubmit={handleSubmit}>
-        <div className="input-group">
+        <div className={classes.container}>
           <Input
+            className={classes.input}
             required
             fullWidth
             id="city"
             placeholder="City"
             onChange={handleChange}
           />
-        </div>
-        <div className="input-group">
           <Input
+            className={classes.input}
             required
             fullWidth
             id="state"
@@ -37,16 +40,9 @@ const AddLocationCard = ({ handleChange, handleSubmit, classes }) => {
             onChange={handleChange}
           />
         </div>
-        <Fab
-          type="submit"
-          variant="extended"
-          color="primary"
-          aria-label="Add"
-          id="fab"
-        >
-          <AddIcon id="extendedIcon" />
+        <Button type="submit" size="small" color="primary">
           Add Location
-        </Fab>
+        </Button>
       </form>
     </Card>
   );

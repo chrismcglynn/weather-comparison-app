@@ -1,51 +1,58 @@
 import React from "react";
-import { Card, Fab, Grid } from "@material-ui/core";
-import DeleteIcon from "@material-ui/icons/Delete";
-import "weather-icons/css/weather-icons.css";
-//import "./LocationCardStyles.css";
+import {
+  Button,
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+  withStyles
+} from "@material-ui/core";
 
-const LocationCard = ({ deleteLocation, locations }) => {
+const styles = {
+  card: {
+    margin: '36px auto',
+    marginBottom: '24px',
+    width: '90%',
+    padding: '14px',
+  },
+  deleteButton: {
+    float: 'right'
+  },
+};
+
+const LocationCard = ({ deleteLocation, locations, classes }) => {
   const locationList = locations.map(location => {
     return (
-    <Grid item xs={12} sm={6} key={location.id}>
-      <Card className="location-card" elevation={4}>
-        <div className="location-header-wrapper">
-          <div className="location-info">
-            <span>
-              <p className="city-header">{location.city}</p>
-            </span>
-            <span>
-              <p className="state-header">{location.state}</p>
-            </span>
-          </div>
-          <div className="weather-icon-wrapper">
-            <i className="wi wi-day-lightning" />
-          </div>
-        </div>
-        <div className="card-content" />
-        <Fab
-          type="submit"
-          variant="extended"
-          color="secondary"
-          aria-label="Add"
-          id="fab"
-          onClick={() => {
-            deleteLocation(location.id);
-          }}
-        >
-          <DeleteIcon id="extended-icon" />
-          Remove Location
-        </Fab>
-      </Card>
-    </Grid>
+      <Grid item xs={12} sm={6} key={location.id}>
+        <Card className={classes.card} elevation={4}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {location.city}
+            </Typography>
+            <Typography component="p">
+              {location.state}
+            </Typography>
+            <Typography gutterBottom variant="h5" component="h2">
+              {location.temperature + String.fromCharCode(176)}
+            </Typography>
+            <Typography gutterBottom variant="h5" component="h2">
+              {location.condition.charAt(0).toUpperCase() + location.condition.slice(1)}
+            </Typography>
+            <Button
+              className={classes.deleteButton}
+              size="small"
+              color="secondary"
+              onClick={() => {deleteLocation(location.id)}}
+            >
+              Remove Location
+            </Button>
+          </CardContent>
+        </Card>
+      </Grid>
     );
   });
 
-  return (
-    <>
-      {locationList}
-    </>
-  )
+  return <>{locationList}</>;
 };
 
-export default LocationCard;
+export default withStyles(styles)(LocationCard)

@@ -20,7 +20,9 @@ class AddLocation extends Component {
         api_url + `${cityInput}&units=imperial` + api_key
       )
       .then(res => {
-        console.log(res.data);
+        console.log(res.data)
+        console.log(Math.round(res.data.main.temp));
+        console.log(res.data.weather[0].description);
       });
     this.props.addLocation(this.state);
   }
